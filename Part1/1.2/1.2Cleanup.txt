@@ -1,0 +1,13 @@
+➜  ~ docker ps -as
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES              SIZE
+9629d14c79c0   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             zealous_leakey     1.09kB (virtual 143MB)
+e19bf724cb18   nginx     "/docker-entrypoint.…"   4 minutes ago   Exited (0) 4 minutes ago                  inspiring_yonath   1.09kB (virtual 143MB)
+e30d1ea57787   nginx     "/docker-entrypoint.…"   4 minutes ago   Exited (0) 3 minutes ago                  focused_ride       1.09kB (virtual 143MB)
+
+➜  ~ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+➜  ~ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+

@@ -1,0 +1,49 @@
+➜  ~ docker pull devopsdockeruh/simple-web-service:ubuntu
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Image is up to date for devopsdockeruh/simple-web-service:ubuntu
+docker.io/devopsdockeruh/simple-web-service:ubuntu
+➜  ~ docker pull devopsdockeruh/simple-web-service:alpine
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete 
+1dace236434b: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+
+➜  ~ docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              18.04     f9a80a55f492   4 days ago    63.2MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB
+
+
+  ~ docker run -d fd312adc88e0 
+76d1bf78fab99f6265f666b158a49135309dad1554b872938b840ea7c84019a5
+➜  ~ docker ps
+CONTAINER ID   IMAGE          COMMAND                 CREATED          STATUS          PORTS     NAMES
+76d1bf78fab9   fd312adc88e0   "/usr/src/app/server"   18 seconds ago   Up 17 seconds             lucid_jang
+➜  ~ docker exec -it lucid_jang sh    
+/usr/src/app # ls
+server    text.log
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-06-03 13:08:33 +0000 UTC
+2023-06-03 13:08:35 +0000 UTC
+2023-06-03 13:08:37 +0000 UTC
+2023-06-03 13:08:39 +0000 UTC
+2023-06-03 13:08:41 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-06-03 13:08:43 +0000 UTC
+2023-06-03 13:08:45 +0000 UTC
+2023-06-03 13:08:47 +0000 UTC
+2023-06-03 13:08:49 +0000 UTC
+2023-06-03 13:08:51 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-06-03 13:08:53 +0000 UTC
+2023-06-03 13:08:55 +0000 UTC
+2023-06-03 13:08:57 +0000 UTC
+2023-06-03 13:08:59 +0000 UTC
+2023-06-03 13:09:01 +0000 UTC
+read escape sequence

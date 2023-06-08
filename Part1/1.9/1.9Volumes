@@ -1,0 +1,27 @@
+  Desktop touch text.log
+➜  Desktop ls
+bekir  DevopsWithDocker2023  dockerfile  text.log
+➜Desktop docker run -d -v "$(pwd)/text.log://usr/src/app/text.log" devopsdockeruh/simple-web-service:alpine 
+Unable to find image 'devopsdockeruh/simple-web-service:alpine' locally
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Already exists 
+1dace236434b: Already exists 
+4f4fb700ef54: Already exists 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+700b60e7a322c23639c36f09d5a6cb9708504b694cc169db7a17eed9141ae414
+➜  Desktop tail -f ./text.log 
+2023-06-05 14:09:28 +0000 UTC
+2023-06-05 14:09:30 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-06-05 14:09:32 +0000 UTC
+2023-06-05 14:09:34 +0000 UTC
+2023-06-05 14:09:36 +0000 UTC
+2023-06-05 14:09:38 +0000 UTC
+2023-06-05 14:09:40 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-06-05 14:09:42 +0000 UTC
+2023-06-05 14:09:44 +0000 UTC
+➜  Desktop docker ps
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+700b60e7a322   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   2 minutes ago   Up 2 minutes             suspicious_cohen

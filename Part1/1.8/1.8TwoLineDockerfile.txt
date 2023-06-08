@@ -1,0 +1,34 @@
+➜  ~ docker build . -t web-server
+[+] Building 0.2s (5/5) FINISHED                                                                                                                      
+ => [internal] load .dockerignore                                                                                                                0.0s
+ => => transferring context: 2B                                                                                                                  0.0s
+ => [internal] load build definition from dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 153B                                                                                                             0.0s
+ => [internal] load metadata for docker.io/devopsdockeruh/simple-web-service:alpine                                                              0.0s
+ => [1/1] FROM docker.io/devopsdockeruh/simple-web-service:alpine                                                                                0.1s
+ => exporting to image                                                                                                                           0.0s
+ => => exporting layers                                                                                                                          0.0s
+ => => writing image sha256:678b086d5deb4ff3ecea277b0438351bff76025b054b1ab3550a832df5fd2a9f                                                     0.0s
+ => => naming to docker.io/library/web-server                                                                                                    0.0s
+➜  ~ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED          SIZE
+hellodockeradditional               latest    385ad295c316   51 minutes ago   5.62MB
+hello-docker                        v2        0a776f32c2af   2 hours ago      5.62MB
+hellodocker                         latest    0a776f32c2af   2 hours ago      5.62MB
+ubuntu                              18.04     f9a80a55f492   4 days ago       63.2MB
+ubuntu                              bionic    f9a80a55f492   4 days ago       63.2MB
+ubuntu                              latest    1f6ddc1b2547   11 days ago      77.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago      83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago      15.7MB
+web-server                          latest    678b086d5deb   2 years ago      15.7MB
+devopsdockeruh/pull_exercise        latest    d9854bc0e13a   4 years ago      75.3MB
+➜  ~ docker run web-server 
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+

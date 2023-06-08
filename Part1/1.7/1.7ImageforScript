@@ -1,0 +1,24 @@
+➜  ~ docker build . -t curler
+[+] Building 26.1s (6/6) FINISHED                                                                                                                     
+ => [internal] load build definition from dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 267B                                                                                                             0.0s
+ => [internal] load .dockerignore                                                                                                                0.0s
+ => => transferring context: 2B                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                  0.0s
+ => [1/2] FROM docker.io/library/ubuntu:18.04                                                                                                    0.0s
+ => [2/2] RUN apt-get update; apt-get install -y curl;                                                                                          25.8s
+ => exporting to image                                                                                                                           0.3s
+ => => exporting layers                                                                                                                          0.2s
+ => => writing image sha256:d553f26800e165461e97d0baa607a8896d38bf56090004fae5d90512a178de7d                                                     0.0s 
+ => => naming to docker.io/library/curler                                                                                                        0.0s 
+➜  ~ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>

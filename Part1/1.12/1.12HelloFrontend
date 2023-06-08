@@ -1,0 +1,2 @@
+➜  example-frontend git:(main) ✗ docker build . -t frontend2
+➜  example-frontend git:(main) ✗ docker run -p 5000:5000 frontend2 
