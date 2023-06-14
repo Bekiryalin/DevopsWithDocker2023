@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hello-world:
+    build: .
+    ports:
+      - 80:8000
+    volumes:
+      - ./hello_world:/app/hello_world
+
+    
