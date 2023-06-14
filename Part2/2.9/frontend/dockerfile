@@ -1,0 +1,31 @@
+# Use the official Node.js 14 LTS image as the base
+FROM node:14
+
+# Install Git
+RUN apt-get update && apt-get install -y git
+
+# Install serve globally
+RUN npm install -g serve
+
+# Set the working directory
+WORKDIR /app
+
+# Clone the repository
+RUN git clone https://github.com/docker-hy/material-applications.git /app
+
+# Change directory to the frontend app and install dependencies
+WORKDIR /app/example-frontend
+RUN npm install
+
+# Set the backend URL environment variable
+ENV REACT_APP_BACKEND_URL=http://localhost/api
+
+# Build the frontend app
+RUN npm run build
+
+# Expose port 5000 for the application
+EXPOSE 5000
+
+# Set the command to serve the built app
+CMD serve -s -l 5000 /material-applications/example-frontend/build
+

@@ -1,0 +1,20 @@
+ 2.1 git:(master) ✗ docker compose up
+[+] Building 0.0s (0/0)                                                                                                                                                                              
+WARN[0000] Found orphan containers ([exercise_21 21-exercise_21-run-6dfa974afca9 21-exercise_21-run-60b28abdb037]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] Running 1/0
+ ✔ Container 21-simple-web-log-1  Recreated                                                                                                                                                     0.1s 
+Attaching to webservice21
+webservice21  | Starting log output
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+webservice21  | Wrote text to /usr/src/app/text.log
+^CGracefully stopping... (press Ctrl+C again to force)
+Aborting on container exit...
+[+] Stopping 1/1
+ ✔ Container webservice21  Stopped                                                                                                                                                              0.2s 
+canceledz

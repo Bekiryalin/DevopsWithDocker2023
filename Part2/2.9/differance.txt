@@ -1,0 +1,4 @@
+-Remove the line that sets the value of REACT_APP_BACKEND_URL from the Dockerfile.frontend file.
+-In the docker-compose.yml file, add the following line to the environment section: REACT_APP_BACKEND_URL=http://proxy:80.
+-Remove the line that sets the value of REQUEST_ORIGIN from the Dockerfile.backend file.
+-In the docker-compose.yml file, add the following line to the environment section: REQUEST_ORIGIN=http://proxy:80.

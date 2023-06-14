@@ -1,0 +1,15 @@
+➜  scaling-exercise docker compose up --scale compute=2
+[+] Building 0.0s (0/0)                                                                                                                               
+[+] Running 4/0
+ ✔ Container load-balancer               Created                                                                                                 0.0s 
+ ✔ Container calculator                  Created                                                                                                 0.0s 
+ ✔ Container scaling-exercise-compute-2  Created                                                                                                 0.1s 
+ ✔ Container scaling-exercise-compute-1  Recreated                                                                                               0.1s 
+Attaching to calculator, load-balancer, scaling-exercise-compute-1, scaling-exercise-compute-2
+load-balancer               | Info: running nginx-proxy version 1.3.1-19-gc1a2b31
+load-balancer               | Warning: A custom dhparam.pem file was provided. Best practice is to use standardized RFC7919 DHE groups instead.
+load-balancer               | Warning: TRUST_DOWNSTREAM_PROXY is not set; defaulting to "true". For security, you should explicitly set TRUST_DOWNSTREAM_PROXY to "false" if there is not a trusted reverse proxy in front of this proxy.
+load-balancer               | Warning: The default value of TRUST_DOWNSTREAM_PROXY might change to "false" in a future version of nginx-proxy. If you require TRUST_DOWNSTREAM_PROXY to be enabled, explicitly set it to "true".
+load-balancer               | forego      | starting dockergen.1 on port 5000
+load-balancer               | forego      | starting nginx.1 on port 5100
+load-balancer               | nginx.1     | 2023/06/11 11:55:17 [notice] 20#20: using the "epoll" event method
