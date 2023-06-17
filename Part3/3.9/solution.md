@@ -17,6 +17,7 @@ Finally, we set the command to start the server binary.
 # ---Dockerfile---
 
 #Build stage
+
 FROM golang:1.16-alpine AS builder
 
 WORKDIR /usr/src/app
@@ -29,6 +30,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server .
 
 #Final stage
+
 FROM scratch
 
 WORKDIR /usr/src/app
