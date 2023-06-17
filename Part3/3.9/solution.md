@@ -1,4 +1,4 @@
-➜  ~ docker images
+# ➜  ~ docker images
 REPOSITORY       TAG       IMAGE ID       CREATED          SIZE
 multibackend     latest    b0e560dec1dc   35 seconds ago   18MB
 multifrontend    latest    fa7b5be2191b   4 hours ago      129MB
@@ -9,7 +9,7 @@ frontend         latest    ddf2fa95b9d3   13 hours ago     1.23GB
 backend          latest    6f8504bb6586   14 hours ago     1.08GB
 editedbackend    latest    f42efcc8053c   14 hours ago     1.07GB
 
-
+# 
 We start with a build stage using the golang:1.16-alpine base image.
 We set the working directory to /usr/src/app in both stages.
 In the build stage, we copy the go.mod and go.sum files to enable dependency caching using Go modules.
@@ -24,7 +24,7 @@ Finally, we set the command to start the server binary.
 
 
 
----Dockerfile---
+# ---Dockerfile---
 # Build stage
 FROM golang:1.16-alpine AS builder
 

@@ -1,15 +1,5 @@
-➜  ~ docker images
-REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
-multifrontend    latest    fa7b5be2191b   6 minutes ago   129MB
-alpinefrontend   latest    5482ac938fef   9 hours ago     118MB
-alpinebackend    latest    8da616b7463a   9 hours ago     447MB
-editedfrontend   latest    155618d45cf9   9 hours ago     1.23GB
-frontend         latest    ddf2fa95b9d3   9 hours ago     1.23GB
-backend          latest    6f8504bb6586   9 hours ago     1.08GB
-editedbackend    latest    f42efcc8053c   9 hours ago     1.07GB
 
-
----SOLUTION---
+# ---SOLUTION---
 We define a build stage using the AS keyword and name it builder.
 We set the working directory to /usr/src/app in both stages.
 In the build stage, we copy the package.json and package-lock.json (or yarn.lock) files to the working directory and run npm ci to install dependencies based on the lockfile. This ensures reproducibility and faster installation.
@@ -24,7 +14,7 @@ We switch the user to appuser for improved security.
 Finally, we set the command to start the serve package, serving the static files in the build directory on port 5000.
 
 
-Dockerfile
+# Dockerfile
 
 
 # Build stage

@@ -1,3 +1,4 @@
+#
 1-Use a minimal base image: Instead of golang:1.16-alpine, we can use an even smaller base image like golang:1.16-alpine3.13. This reduces the image size further.
 
 2-Leverage multi-stage builds: Multi-stage builds allow us to build the application in one stage and copy only the necessary artifacts to the final stage. This helps reduce the final image size by excluding build dependencies.
@@ -10,7 +11,7 @@
 
 
 
-Here's a summary of the optimizations made:
+# Here's a summary of the optimizations made:
 
 1-We switched to the golang:1.16-alpine3.13 base image to use a more minimal version of Alpine Linux.
 2-The build stage leverages multi-stage builds, separating the build environment from the final runtime environment.
