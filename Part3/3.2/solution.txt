@@ -1,0 +1,5 @@
+Open Auto-Deploy on render webapp 
+Copy your render 'Deploy Hook' url to github actions secrets 
+
+1-github repo: https://github.com/Bekiryalin/cloudrenderapp
+2-render url:  https://bekir-app.onrender.com

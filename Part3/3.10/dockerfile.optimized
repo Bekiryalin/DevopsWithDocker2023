@@ -1,0 +1,25 @@
+# Build stage
+FROM golang:1.16-alpine3.13 AS builder
+
+WORKDIR /usr/src/app
+
+# Copy go.mod and go.sum separately to leverage Docker layer caching
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o server .
+
+# Final stage
+FROM scratch
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/server .
+
+EXPOSE 8080
+
+USER 1001
+
+CMD ["./server"]

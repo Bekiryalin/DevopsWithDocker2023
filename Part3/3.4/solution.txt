@@ -1,0 +1,3 @@
+docker build -t mluukkai/express_app https://github.com/mluukkai/express_app.git
+
+docker run -p 8080:8080 mluukkai/express_app

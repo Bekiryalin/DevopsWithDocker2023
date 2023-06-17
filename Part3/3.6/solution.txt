@@ -1,0 +1,6 @@
+➜  ~ docker images
+REPOSITORY       TAG       IMAGE ID       CREATED          SIZE
+editedfrontend   latest    155618d45cf9   3 minutes ago    1.23GB
+frontend         latest    ddf2fa95b9d3   6 minutes ago    1.23GB
+backend          latest    6f8504bb6586   13 minutes ago   1.08GB
+editedbackend    latest    f42efcc8053c   22 minutes ago   1.07GB
