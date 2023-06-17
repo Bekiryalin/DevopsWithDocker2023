@@ -1,13 +1,3 @@
-# ➜  ~ docker images
-REPOSITORY       TAG       IMAGE ID       CREATED          SIZE
-multibackend     latest    b0e560dec1dc   35 seconds ago   18MB
-multifrontend    latest    fa7b5be2191b   4 hours ago      129MB
-alpinefrontend   latest    5482ac938fef   13 hours ago     118MB
-alpinebackend    latest    8da616b7463a   13 hours ago     447MB
-editedfrontend   latest    155618d45cf9   13 hours ago     1.23GB
-frontend         latest    ddf2fa95b9d3   13 hours ago     1.23GB
-backend          latest    6f8504bb6586   14 hours ago     1.08GB
-editedbackend    latest    f42efcc8053c   14 hours ago     1.07GB
 
 # 
 We start with a build stage using the golang:1.16-alpine base image.
@@ -25,7 +15,8 @@ Finally, we set the command to start the server binary.
 
 
 # ---Dockerfile---
-# Build stage
+
+#Build stage
 FROM golang:1.16-alpine AS builder
 
 WORKDIR /usr/src/app
@@ -37,7 +28,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server .
 
-# Final stage
+#Final stage
 FROM scratch
 
 WORKDIR /usr/src/app
