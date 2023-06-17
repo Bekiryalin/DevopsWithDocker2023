@@ -14,7 +14,11 @@
 # Here's a summary of the optimizations made:
 
 1-We switched to the golang:1.16-alpine3.13 base image to use a more minimal version of Alpine Linux.
+
 2-The build stage leverages multi-stage builds, separating the build environment from the final runtime environment.
+
 3-Go modules are used for dependency management.
+
 4-We enable CGO and set the -ldflags="-s -w" build flag to optimize the binary size by stripping debugging symbols and reducing binary metadata.
+
 5-Unnecessary files and dependencies are removed after the build stage, resulting in a smaller final image.
